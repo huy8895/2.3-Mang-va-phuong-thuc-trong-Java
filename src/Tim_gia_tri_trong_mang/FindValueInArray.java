@@ -12,7 +12,7 @@ public class FindValueInArray {
 
         boolean isExist = false;
         for (int i = 0; i < students.length; i ++){
-            if (students[i].equals(input_name)){
+            if (students[i].equalsIgnoreCase(input_name)){
                 System.out.println("Position of the students in the lists " + input_name + "is: " + (i + 1));
                 isExist = true;
                 break;
