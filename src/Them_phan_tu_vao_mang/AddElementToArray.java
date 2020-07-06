@@ -9,7 +9,7 @@ public class AddElementToArray {
         Scanner scanner = new Scanner(System.in);
         int index;
         int newValue;
-        int [] arr = createRandomArray(10);
+        int [] arr = createRandomArray();
 
         System.out.println();
         System.out.print("Enter index position to insert: ");
@@ -22,7 +22,7 @@ public class AddElementToArray {
             System.out.print(value + "\t");
         }
     }
-    public static int[] createRandomArray(int number){
+    public static int[] createRandomArray(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter size of Array: ");
         int size = scanner.nextInt();
@@ -31,6 +31,7 @@ public class AddElementToArray {
             arr[i] = (int) (Math.random() * size);
             System.out.print(arr[i] + "\t");
         }
+        System.out.println();
         return arr;
     }
 
