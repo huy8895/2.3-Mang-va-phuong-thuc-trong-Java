@@ -17,8 +17,19 @@ public class GreatestValueInArray {
 
         array = new int[size];
         for (int i = 0; i < size; i++){
-            System.out.print("Enter element " + (i + 1) + ": ");
-            array[i] = scanner.nextInt();
+            array[i] = (int)Math.round(Math.random()*20);
+            System.out.print(array[i] + "\t");
         }
+        System.out.println();
+        int max = array[0];
+        int index = 1;
+        for (int i = 0; i < array.length;i++ ){
+            if (array[i] > max){
+                max = array[i];
+                index = i + 1;
+            }
+        }
+        System.out.println("The greatest value in array is " + max + " At :" + index);
+
     }
 }
