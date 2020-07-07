@@ -3,10 +3,13 @@ package Xoa_phan_tu_khoi_mang;
 public class RemoveElementFromArray {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 1, 2, 34, 5};
-        int index_del = findX(4,arr);
-        removeX(index_del, arr);
+        do {
+            int index_del = findX(1,arr);
+            removeX(index_del, arr);
+        } while (findX(1,arr) > 0);
+
         for (int value : arr) {
-            System.out.println(value + " ");
+            System.out.print(value + " ");
         }
     }
 
