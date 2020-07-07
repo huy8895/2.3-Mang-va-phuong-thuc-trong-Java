@@ -25,13 +25,12 @@ public class MineSweeper {
                     };
 
                     int minesAround = 0;
-                    for (int i = 0; i < NEIGHBOURS_ORDINATE.length; i++) {
-                        int[] neighbourOrdinate = NEIGHBOURS_ORDINATE[i];
+                    for (int[] neighbourOrdinate : NEIGHBOURS_ORDINATE) {
                         int xOrdinateOfNeighbour = neighbourOrdinate[1];
                         int yOrdinateOfNeighbour = neighbourOrdinate[0];
 
                         boolean isOutOfMapNeighbour = xOrdinateOfNeighbour < 0 || xOrdinateOfNeighbour == MAP_WIDTH
-                                                        || yOrdinateOfNeighbour < 0 || yOrdinateOfNeighbour ==MAP_HEIGHT;
+                                || yOrdinateOfNeighbour < 0 || yOrdinateOfNeighbour == MAP_HEIGHT;
                         if (isOutOfMapNeighbour) continue;
 
                         boolean isMineOwnerNeighbour = map[yOrdinateOfNeighbour][xOrdinateOfNeighbour].equals("*");
