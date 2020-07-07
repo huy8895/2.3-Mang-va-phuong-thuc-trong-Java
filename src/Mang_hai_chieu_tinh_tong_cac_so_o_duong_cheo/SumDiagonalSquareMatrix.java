@@ -14,6 +14,7 @@ public class SumDiagonalSquareMatrix {
         System.out.print("Sum in the main diagonal of the Square matrix is: " + sumDiagonal);
 
     }
+
     public static void showArray(int[][] array) {
         for (int[] ints : array) {
             for (int anInt : ints) {
@@ -22,6 +23,7 @@ public class SumDiagonalSquareMatrix {
             System.out.println();
         }
     }
+
     public static int[][] createSquareMatrix(int size) {
         int[][] arr = new int[size][size];
         for (int i = 0; i < size; i++) {
@@ -31,11 +33,12 @@ public class SumDiagonalSquareMatrix {
         }
         return arr;
     }
-    public static int sumDiagonalLine(int[][] array ){
+
+    public static int sumDiagonalLine(int[][] array) {
         int sum = 0;
-        for (int i = 0; i < array.length;i++){
-            for (int j = 0; j < array[i].length;j++){
-                if (i == j){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (i == j) {
                     sum += array[i][j];
                 }
             }
